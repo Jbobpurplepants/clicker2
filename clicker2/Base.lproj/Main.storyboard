@@ -16,50 +16,163 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Clicks: 0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="818-dS-Y7J">
-                                <rect key="frame" x="165" y="336" width="109" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Leaves: 0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="818-dS-Y7J">
+                                <rect key="frame" x="39" y="338" width="314" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="btH-m2-wNy">
-                                <rect key="frame" x="165" y="442" width="62" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="btH-m2-wNy">
+                                <rect key="frame" x="169" y="405" width="52" height="35"/>
                                 <color key="backgroundColor" systemColor="systemPurpleColor"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Click">
+                                <buttonConfiguration key="configuration" style="plain" title="Tap">
                                     <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="clickButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EJt-rt-ngz"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hYJ-nD-yf9">
-                                <rect key="frame" x="169" y="612" width="54" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Buy"/>
-                                <connections>
-                                    <action selector="buyClickerButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jpC-Wv-ThN"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Buy Clicker: 10" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0AY-r9-xcs">
-                                <rect key="frame" x="140" y="583" width="162" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fwq-37-I9R">
+                                <rect key="frame" x="0.0" y="514" width="390" height="330"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gxg-0g-xOj">
+                                        <rect key="frame" x="0.0" y="0.0" width="390" height="777"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tapper: 10" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0AY-r9-xcs">
+                                                <rect key="frame" x="31" y="19" width="328" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hYJ-nD-yf9">
+                                                <rect key="frame" x="168" y="76" width="54" height="35"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Buy"/>
+                                                <connections>
+                                                    <action selector="buyClickerButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jpC-Wv-ThN"/>
+                                                </connections>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Botanist: 100" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VUV-39-lya">
+                                                <rect key="frame" x="71" y="119" width="249" height="40"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R5e-CB-IVu">
+                                                <rect key="frame" x="168" y="194" width="54" height="35"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Buy"/>
+                                                <connections>
+                                                    <action selector="buyBotanistButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DEc-zu-OUX"/>
+                                                </connections>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Lumberjack: 5,000" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0pd-Dv-12l">
+                                                <rect key="frame" x="-4" y="237" width="398" height="26"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0 Tapper(s)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gea-iC-jIU">
+                                                <rect key="frame" x="87" y="47" width="217" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" systemColor="systemPinkColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0 Botanist(s)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="766-es-XLd">
+                                                <rect key="frame" x="87" y="165" width="217" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" systemColor="systemPinkColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0 Lumberjack(s)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZbI-Fy-KjD">
+                                                <rect key="frame" x="87" y="271" width="217" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" systemColor="systemPinkColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bwF-FH-tgd">
+                                                <rect key="frame" x="168" y="300" width="54" height="35"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Buy"/>
+                                                <connections>
+                                                    <action selector="buyLumberjackButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="thp-fK-xLO"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" id="5WR-VV-k4j"/>
+                                            <constraint firstAttribute="height" id="7Qf-rd-wUW"/>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="700" id="dHt-FZ-yyS"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="gxg-0g-xOj" secondAttribute="bottom" constant="500" id="5zT-Hu-Jbx"/>
+                                    <constraint firstItem="gxg-0g-xOj" firstAttribute="top" secondItem="fwq-37-I9R" secondAttribute="top" constant="49.670000000000002" id="Agi-ZV-Bqt"/>
+                                    <constraint firstAttribute="bottom" secondItem="gxg-0g-xOj" secondAttribute="bottom" constant="300" id="Jsc-cC-aRR"/>
+                                    <constraint firstAttribute="trailing" secondItem="gxg-0g-xOj" secondAttribute="trailing" id="Nle-iN-UxH"/>
+                                    <constraint firstAttribute="trailing" secondItem="gxg-0g-xOj" secondAttribute="trailing" id="SoQ-am-VSA"/>
+                                    <constraint firstItem="gxg-0g-xOj" firstAttribute="leading" secondItem="fwq-37-I9R" secondAttribute="leading" id="ZFY-Wz-k70"/>
+                                    <constraint firstItem="gxg-0g-xOj" firstAttribute="top" secondItem="fwq-37-I9R" secondAttribute="top" id="iF9-bt-yqs"/>
+                                    <constraint firstAttribute="top" secondItem="gxg-0g-xOj" secondAttribute="bottom" constant="-330" id="qd1-zj-uhc"/>
+                                    <constraint firstItem="gxg-0g-xOj" firstAttribute="leading" secondItem="fwq-37-I9R" secondAttribute="leading" id="w5g-Pm-Pob"/>
+                                </constraints>
+                            </scrollView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Leaves Per Second: 0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zuy-sX-K8R">
+                                <rect key="frame" x="39" y="456" width="312" height="20.333333333333314"/>
+                                <color key="backgroundColor" systemColor="systemGreenColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="systemTealColor"/>
+                        <constraints>
+                            <constraint firstItem="zuy-sX-K8R" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="39" id="AaL-TC-8Gl"/>
+                            <constraint firstItem="btH-m2-wNy" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="169" id="CTz-M1-o12"/>
+                            <constraint firstItem="zuy-sX-K8R" firstAttribute="top" secondItem="btH-m2-wNy" secondAttribute="bottom" constant="19" id="GwW-xn-vtC"/>
+                            <constraint firstItem="gxg-0g-xOj" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="1.77725" id="JA0-ZT-lq3"/>
+                            <constraint firstItem="fwq-37-I9R" firstAttribute="top" secondItem="zuy-sX-K8R" secondAttribute="bottom" constant="49.670000000000002" id="Jqv-Xy-34e"/>
+                            <constraint firstItem="zuy-sX-K8R" firstAttribute="top" secondItem="btH-m2-wNy" secondAttribute="bottom" constant="19" id="Oe1-Ic-p9b"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="818-dS-Y7J" secondAttribute="trailing" constant="37" id="Tbu-vm-2wk"/>
+                            <constraint firstItem="btH-m2-wNy" firstAttribute="top" secondItem="818-dS-Y7J" secondAttribute="bottom" constant="31" id="YaI-qB-Sx8"/>
+                            <constraint firstItem="fwq-37-I9R" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="YcX-RG-e1s"/>
+                            <constraint firstAttribute="bottom" secondItem="fwq-37-I9R" secondAttribute="bottom" id="Ykd-9k-lMq"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="zuy-sX-K8R" secondAttribute="trailing" constant="39" id="Z3X-DG-4A8"/>
+                            <constraint firstItem="818-dS-Y7J" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="291" id="ayA-rx-LTR"/>
+                            <constraint firstItem="gxg-0g-xOj" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="e4t-m6-fo6"/>
+                            <constraint firstItem="btH-m2-wNy" firstAttribute="top" secondItem="818-dS-Y7J" secondAttribute="bottom" constant="31" id="ihB-sx-y0U"/>
+                            <constraint firstItem="818-dS-Y7J" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="39" id="nRU-oU-bpb"/>
+                            <constraint firstItem="fwq-37-I9R" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="xuU-vs-yYe"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="btH-m2-wNy" secondAttribute="trailing" constant="169" id="xvO-cb-CdT"/>
+                        </constraints>
                     </view>
+                    <size key="freeformSize" width="390" height="844"/>
                     <connections>
+                        <outlet property="botanistAmount" destination="VUV-39-lya" id="20l-WC-hz5"/>
+                        <outlet property="buyBotanistLabel" destination="VUV-39-lya" id="oJG-Jd-hCF"/>
                         <outlet property="buyClickerButton" destination="hYJ-nD-yf9" id="ULb-g1-yiy"/>
                         <outlet property="buyClickerLabel" destination="0AY-r9-xcs" id="vU8-My-0Dg"/>
+                        <outlet property="buyLumberjackLabel" destination="0pd-Dv-12l" id="9Xl-Q3-awZ"/>
                         <outlet property="clickButton" destination="btH-m2-wNy" id="6cc-Oa-Ut1"/>
                         <outlet property="clicksLabel" destination="818-dS-Y7J" id="j3n-8n-35f"/>
+                        <outlet property="leavesPerSecond" destination="zuy-sX-K8R" id="DgZ-MQ-u81"/>
+                        <outlet property="lumberjackAmount" destination="ZbI-Fy-KjD" id="2oh-s8-9kI"/>
+                        <outlet property="tapperAmount" destination="Gea-iC-jIU" id="G9g-vh-8RM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -68,11 +181,17 @@
         </scene>
     </scenes>
     <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemPurpleColor">
             <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemTealColor">
+            <color red="0.18823529411764706" green="0.69019607843137254" blue="0.7803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

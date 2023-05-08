@@ -48,6 +48,12 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var clickerUpgradeAmount: UILabel!
     
+    
+    @IBOutlet weak var buyLogCabinLabel: UILabel!
+    
+    @IBOutlet weak var logCabinAmount: UILabel!
+    
+    
     var lps = 0.0 {
         didSet {
             leavesPerSecond.text = "Leaves Per Second: \(roundedValueLps)"
@@ -99,6 +105,12 @@ class ViewController: UIViewController {
         }
     }
     
+    var logAmount = 0 {
+        didSet {
+            logCabinAmount.text = "\(logAmount) Log Cabin(s)"
+        }
+    }
+    
     
     var botanist = 100.0 {
         didSet {
@@ -121,6 +133,12 @@ class ViewController: UIViewController {
     var clickerUpgrade = 10.0 {
         didSet {
             buyClickerUpgradeLabel.text = "Clicking Upgrade: \(roundedClickingUpgrade) Nuts"
+        }
+    }
+    
+    var log = 20000.0 {
+        didSet {
+            buyLogCabinLabel.text = "Log Cabin: \(roundedLogCabin)"
         }
     }
     var valueClicks : Double {
@@ -184,6 +202,16 @@ class ViewController: UIViewController {
             round(clickingUpgrade * 100) / 100.0
         }
     }
+    var logCabin : Double {
+        get {
+            return log
+        }
+    }
+    var roundedLogCabin : Double {
+        get {
+            round(logCabin * 100) / 100.0
+        }
+    }
     var valueLps : Double {
         get {
             return lps
@@ -213,19 +241,19 @@ class ViewController: UIViewController {
     @IBAction func clickButtonPressed(_ sender: Any) {
         clicks = clicks + 1.0
         if clickrUpgradeAmount == 1 {
-            clicks = clicks + 5.0
+            clicks = clicks + 9.0
         }
         if clickrUpgradeAmount == 2 {
-            clicks = clicks + 6.0
+            clicks = clicks + 10.0
         }
         if clickrUpgradeAmount == 3 {
-            clicks = clicks + 7.0
+            clicks = clicks + 11.0
         }
         if clickrUpgradeAmount == 4 {
-            clicks = clicks + 8.0
+            clicks = clicks + 12.0
         }
         if clickrUpgradeAmount == 5 {
-            clicks = clicks + 10.0
+            clicks = clicks + 14.0
         }
         
     }
@@ -239,13 +267,13 @@ class ViewController: UIViewController {
                 lps = lps + 1.1
             }
             if clicker >= 100 {
-                lps = lps + 1.3
+                lps = lps + 3.3
             }
             if clicker >= 400 {
-                lps = lps + 2.3
+                lps = lps + 5.3
             }
             if clicker >= 3000 {
-                lps = lps + 4.4
+                lps = lps + 7.4
             }
             
             clicks -= clicker
@@ -264,7 +292,7 @@ class ViewController: UIViewController {
                 clicks = clicks + 2.3
             }
             if clicker >= 3000 {
-                clicks = clicks + 4.4
+                clicks = clicks + 6.4
             }
         }
         
@@ -276,10 +304,10 @@ class ViewController: UIViewController {
         }
         if clicks >= botanist {
             if botanist < 500 {
-                lps = lps + 1.6
+                lps = lps + 2.7
             }
             if botanist >= 500 {
-                lps = lps + 1.9
+                lps = lps + 3.9
             }
             clicks -= botanist
             botanist = botanist * 1.9
@@ -308,7 +336,7 @@ class ViewController: UIViewController {
                 updateCounting()
             })
             func updateCounting (){
-                clicks = clicks + 10.3
+                clicks = clicks + 14.3
                 if lumberjack >= 10000 {
                     clicks = clicks + 15.6
                     
@@ -346,5 +374,23 @@ class ViewController: UIViewController {
         }
         
     }
+    
+    @IBAction func buyLogCabinButton(_ sender: Any) {
+    if clicks < log {
+        return
+    }
+    if clicks >= log {
+        clicks -= log
+        log = log * 1.3
+        logAmount += 1
+        self.timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true, block: {_ in
+            updateCounting()
+        })
+        func updateCounting (){
+            clicks = clicks + 80.3
+        }
+    }
+    
+}
 }
 

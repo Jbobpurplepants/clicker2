@@ -18,6 +18,8 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var clicksLabel: UILabel!
     
+    @IBOutlet weak var nutsLabel: UILabel!
+    
     @IBOutlet weak var clickButton: UIButton!
     
     @IBOutlet weak var buyClickerButton: UIButton!
@@ -28,6 +30,8 @@ class ViewController: UIViewController {
     
     @IBOutlet var buyBotanistLabel: UILabel!
     
+    @IBOutlet weak var BuySquirrelLabel: UILabel!
+    
     @IBOutlet weak var leavesPerSecond: UILabel!
     
     @IBOutlet weak var buyLumberjackLabel: UILabel!
@@ -37,6 +41,13 @@ class ViewController: UIViewController {
     @IBOutlet weak var botanistAmount: UILabel!
     
     @IBOutlet weak var lumberjackAmount: UILabel!
+    
+    @IBOutlet weak var squirrelAmount: UILabel!
+    
+    @IBOutlet weak var buyClickerUpgradeLabel: UILabel!
+    
+    @IBOutlet weak var clickerUpgradeAmount: UILabel!
+    
     var lps = 0.0 {
         didSet {
             leavesPerSecond.text = "Leaves Per Second: \(roundedValueLps)"
@@ -49,9 +60,15 @@ class ViewController: UIViewController {
         }
     }
     
+    var nuts = 0.0 {
+        didSet {
+            nutsLabel.text = "Nuts: \(nuts)"
+        }
+    }
+    
     var clicker = 10.0 {
         didSet {
-            buyClickerLabel.text = "Buy Tapper: \(roundedValueClicker)"
+            buyClickerLabel.text = "Tapper: \(roundedValueClicker)"
             
         }
         
@@ -71,18 +88,39 @@ class ViewController: UIViewController {
             lumberjackAmount.text = "\(lumberAmount) Lumberjack(s)"
         }
     }
-
+    var squirAmount = 0 {
+        didSet {
+            squirrelAmount.text = "\(squirAmount) Squirrel(s)"
+        }
+    }
+    var clickrUpgradeAmount = 0 {
+        didSet {
+            clickerUpgradeAmount.text = "\(clickrUpgradeAmount) Clicking Upgrade(s)"
+        }
+    }
     
     
     var botanist = 100.0 {
         didSet {
-            buyBotanistLabel.text = "Buy Botanist: \(roundedValueBotanist)"
+            buyBotanistLabel.text = "Botanist: \(roundedValueBotanist)"
         }
     }
     
     var lumberjack = 5000.0 {
         didSet {
-            buyLumberjackLabel.text = "Buy LumberJack: \(roundedValueLumberjack)"
+            buyLumberjackLabel.text = "LumberJack: \(roundedValueLumberjack)"
+        }
+    }
+    
+    var squirrel = 10000.0 {
+        didSet {
+            BuySquirrelLabel.text = "Squirrel: \(roundedValueSquirrel)"
+        }
+    }
+    
+    var clickerUpgrade = 10.0 {
+        didSet {
+            buyClickerUpgradeLabel.text = "Clicking Upgrade: \(roundedClickingUpgrade) Nuts"
         }
     }
     var valueClicks : Double {
@@ -126,6 +164,26 @@ class ViewController: UIViewController {
             round(valueLumberjack * 100) / 100.0
         }
     }
+    var valueSquirrel : Double {
+        get {
+            return squirrel
+        }
+    }
+    var roundedValueSquirrel : Double {
+        get {
+            round(valueSquirrel * 100) / 100.0
+        }
+    }
+    var clickingUpgrade : Double {
+        get {
+            return clickerUpgrade
+        }
+    }
+    var roundedClickingUpgrade : Double {
+        get {
+            round(clickingUpgrade * 100) / 100.0
+        }
+    }
     var valueLps : Double {
         get {
             return lps
@@ -154,6 +212,21 @@ class ViewController: UIViewController {
     
     @IBAction func clickButtonPressed(_ sender: Any) {
         clicks = clicks + 1.0
+        if clickrUpgradeAmount == 1 {
+            clicks = clicks + 5.0
+        }
+        if clickrUpgradeAmount == 2 {
+            clicks = clicks + 6.0
+        }
+        if clickrUpgradeAmount == 3 {
+            clicks = clicks + 7.0
+        }
+        if clickrUpgradeAmount == 4 {
+            clicks = clicks + 8.0
+        }
+        if clickrUpgradeAmount == 5 {
+            clicks = clicks + 10.0
+        }
         
     }
     @IBAction func buyClickerButtonPressed(_ sender: Any) {
@@ -241,6 +314,35 @@ class ViewController: UIViewController {
                     
                 }
             }
+        }
+        
+    }
+    
+    @IBAction func buySquirrelButton(_ sender: Any) {
+        if clicks < squirrel {
+            return
+        }
+        if clicks >= squirrel {
+            clicks -= squirrel
+            squirrel = squirrel * 2
+            squirAmount += 1
+            self.timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true, block: {_ in
+                updateCounting()
+            })
+            func updateCounting (){
+                nuts = nuts + 1
+            }
+        }
+        
+    }
+    @IBAction func buyClickerUpgradeButton(_ sender: Any) {
+        if nuts < clickerUpgrade {
+            return
+        }
+        if nuts >= clickerUpgrade {
+            nuts -= clickerUpgrade
+            clickrUpgradeAmount += 1
+            clickerUpgrade = clickerUpgrade * 4
         }
         
     }

@@ -12,18 +12,35 @@
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="clicker2" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Leaves: 0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="818-dS-Y7J">
-                                <rect key="frame" x="39" y="338" width="314" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Leaves: 0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="818-dS-Y7J">
+                                <rect key="frame" x="34" y="383" width="312" height="20.333333333333314"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="btH-m2-wNy">
-                                <rect key="frame" x="169" y="405" width="52" height="35"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Leaves Per Second: 0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zuy-sX-K8R">
+                                <rect key="frame" x="47" y="573" width="296" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Nuts: 0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XMr-ZR-8Nd">
+                                <rect key="frame" x="39" y="412" width="312" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="btH-m2-wNy">
+                                <rect key="frame" x="169" y="488" width="52" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemPurpleColor"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Tap">
@@ -33,69 +50,69 @@
                                     <action selector="clickButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EJt-rt-ngz"/>
                                 </connections>
                             </button>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fwq-37-I9R">
-                                <rect key="frame" x="0.0" y="514" width="390" height="330"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CT7-7O-J3c">
+                                <rect key="frame" x="0.0" y="640" width="390" height="204"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gxg-0g-xOj">
-                                        <rect key="frame" x="0.0" y="0.0" width="390" height="777"/>
+                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Gr9-p0-TjM">
+                                        <rect key="frame" x="0.0" y="-36" width="390" height="1500"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tapper: 10" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0AY-r9-xcs">
-                                                <rect key="frame" x="31" y="19" width="328" height="21"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hYJ-nD-yf9">
-                                                <rect key="frame" x="168" y="76" width="54" height="35"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="Buy"/>
-                                                <connections>
-                                                    <action selector="buyClickerButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jpC-Wv-ThN"/>
-                                                </connections>
-                                            </button>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Botanist: 100" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VUV-39-lya">
-                                                <rect key="frame" x="71" y="119" width="249" height="40"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R5e-CB-IVu">
-                                                <rect key="frame" x="168" y="194" width="54" height="35"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="Buy"/>
-                                                <connections>
-                                                    <action selector="buyBotanistButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DEc-zu-OUX"/>
-                                                </connections>
-                                            </button>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Lumberjack: 5,000" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0pd-Dv-12l">
-                                                <rect key="frame" x="-4" y="237" width="398" height="26"/>
+                                                <rect key="frame" x="31" y="22" width="328" height="21"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0 Tapper(s)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gea-iC-jIU">
-                                                <rect key="frame" x="87" y="47" width="217" height="21"/>
+                                                <rect key="frame" x="87" y="51" width="217" height="21"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" systemColor="systemPinkColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hYJ-nD-yf9">
+                                                <rect key="frame" x="140" y="80" width="111" height="35"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Buy Tapper"/>
+                                                <connections>
+                                                    <action selector="buyClickerButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jpC-Wv-ThN"/>
+                                                </connections>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Botanist: 100" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VUV-39-lya">
+                                                <rect key="frame" x="71" y="108" width="249" height="40"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0 Botanist(s)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="766-es-XLd">
-                                                <rect key="frame" x="87" y="165" width="217" height="21"/>
+                                                <rect key="frame" x="87" y="146" width="217" height="21"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" systemColor="systemPinkColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R5e-CB-IVu">
+                                                <rect key="frame" x="131" y="175" width="120" height="35"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Buy Botanist"/>
+                                                <connections>
+                                                    <action selector="buyBotanistButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DEc-zu-OUX"/>
+                                                </connections>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Lumberjack: 5,000" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0pd-Dv-12l">
+                                                <rect key="frame" x="-4" y="207" width="398" height="26"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0 Lumberjack(s)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZbI-Fy-KjD">
-                                                <rect key="frame" x="87" y="271" width="217" height="21"/>
+                                                <rect key="frame" x="87" y="241" width="217" height="21"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" systemColor="systemPinkColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -103,75 +120,132 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bwF-FH-tgd">
-                                                <rect key="frame" x="168" y="300" width="54" height="35"/>
+                                                <rect key="frame" x="122" y="270" width="147" height="35"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="Buy"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Buy Lumberjack"/>
                                                 <connections>
                                                     <action selector="buyLumberjackButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="thp-fK-xLO"/>
                                                 </connections>
                                             </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Squirrel: 10,000" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xvy-WC-RVw">
+                                                <rect key="frame" x="57" y="313" width="263" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kVq-GC-qT1">
+                                                <rect key="frame" x="130" y="342" width="117" height="35"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Buy Squirrel"/>
+                                                <connections>
+                                                    <action selector="buySquirrelButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wh2-UC-L22"/>
+                                                </connections>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0 Squirrel(s)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2G4-Ee-iKg">
+                                                <rect key="frame" x="80" y="385" width="217" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" systemColor="systemPinkColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Clicking Upgrade: 10 Nuts" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PWP-X2-xhV">
+                                                <rect key="frame" x="31" y="421" width="328" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ofT-fA-bFj">
+                                                <rect key="frame" x="94" y="450" width="189" height="35"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Buy Clicking Upgrade"/>
+                                                <connections>
+                                                    <action selector="buyClickerUpgradeButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="F8y-Ga-cMb"/>
+                                                </connections>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0 Clicking Upgrade(s)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6yd-XF-VtZ">
+                                                <rect key="frame" x="80" y="496" width="217" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" systemColor="systemPinkColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="tapper3" translatesAutoresizingMaskIntoConstraints="NO" id="xb3-gz-gee">
+                                                <rect key="frame" x="8" y="35" width="79" height="65"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="botanist2" translatesAutoresizingMaskIntoConstraints="NO" id="OdX-PF-rdw">
+                                                <rect key="frame" x="8" y="124" width="79" height="65"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="lumberjack" translatesAutoresizingMaskIntoConstraints="NO" id="07K-uL-IWG">
+                                                <rect key="frame" x="8" y="219" width="79" height="65"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="squirrel" translatesAutoresizingMaskIntoConstraints="NO" id="2PE-QZ-PcO">
+                                                <rect key="frame" x="0.0" y="327" width="79" height="65"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cursor" translatesAutoresizingMaskIntoConstraints="NO" id="NMz-4a-4lQ">
+                                                <rect key="frame" x="8" y="450" width="79" height="65"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
                                         </subviews>
                                         <constraints>
-                                            <constraint firstAttribute="height" id="5WR-VV-k4j"/>
-                                            <constraint firstAttribute="height" id="7Qf-rd-wUW"/>
-                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="700" id="dHt-FZ-yyS"/>
+                                            <constraint firstAttribute="height" constant="1500" id="uWx-cI-8gv"/>
                                         </constraints>
                                     </view>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="gxg-0g-xOj" secondAttribute="bottom" constant="500" id="5zT-Hu-Jbx"/>
-                                    <constraint firstItem="gxg-0g-xOj" firstAttribute="top" secondItem="fwq-37-I9R" secondAttribute="top" constant="49.670000000000002" id="Agi-ZV-Bqt"/>
-                                    <constraint firstAttribute="bottom" secondItem="gxg-0g-xOj" secondAttribute="bottom" constant="300" id="Jsc-cC-aRR"/>
-                                    <constraint firstAttribute="trailing" secondItem="gxg-0g-xOj" secondAttribute="trailing" id="Nle-iN-UxH"/>
-                                    <constraint firstAttribute="trailing" secondItem="gxg-0g-xOj" secondAttribute="trailing" id="SoQ-am-VSA"/>
-                                    <constraint firstItem="gxg-0g-xOj" firstAttribute="leading" secondItem="fwq-37-I9R" secondAttribute="leading" id="ZFY-Wz-k70"/>
-                                    <constraint firstItem="gxg-0g-xOj" firstAttribute="top" secondItem="fwq-37-I9R" secondAttribute="top" id="iF9-bt-yqs"/>
-                                    <constraint firstAttribute="top" secondItem="gxg-0g-xOj" secondAttribute="bottom" constant="-330" id="qd1-zj-uhc"/>
-                                    <constraint firstItem="gxg-0g-xOj" firstAttribute="leading" secondItem="fwq-37-I9R" secondAttribute="leading" id="w5g-Pm-Pob"/>
+                                    <constraint firstItem="Gr9-p0-TjM" firstAttribute="leading" secondItem="CT7-7O-J3c" secondAttribute="leading" id="8Bw-bZ-2kH"/>
+                                    <constraint firstItem="Gr9-p0-TjM" firstAttribute="leading" secondItem="XOD-KL-mju" secondAttribute="leading" id="8RF-8g-YCK"/>
+                                    <constraint firstItem="Gr9-p0-TjM" firstAttribute="top" secondItem="MCX-o8-idY" secondAttribute="top" constant="500" id="8WO-gY-Bts"/>
+                                    <constraint firstItem="Gr9-p0-TjM" firstAttribute="top" secondItem="MCX-o8-idY" secondAttribute="top" id="AVJ-1g-dBw"/>
+                                    <constraint firstAttribute="bottom" secondItem="Gr9-p0-TjM" secondAttribute="bottom" id="GMs-Ap-MQ8"/>
+                                    <constraint firstAttribute="trailing" secondItem="Gr9-p0-TjM" secondAttribute="trailing" id="YhZ-Td-bUf"/>
+                                    <constraint firstAttribute="bottom" secondItem="Gr9-p0-TjM" secondAttribute="bottom" id="bLp-zi-zJa"/>
+                                    <constraint firstAttribute="trailing" secondItem="Gr9-p0-TjM" secondAttribute="trailing" id="cft-kJ-0dO"/>
+                                    <constraint firstItem="Gr9-p0-TjM" firstAttribute="top" secondItem="CT7-7O-J3c" secondAttribute="top" id="dXF-eG-33M"/>
+                                    <constraint firstItem="Gr9-p0-TjM" firstAttribute="leading" secondItem="CT7-7O-J3c" secondAttribute="leading" id="rPo-oI-D6l"/>
+                                    <constraint firstItem="Gr9-p0-TjM" firstAttribute="trailing" secondItem="XOD-KL-mju" secondAttribute="trailing" id="vzS-bh-G0U"/>
                                 </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="XOD-KL-mju"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="MCX-o8-idY"/>
                             </scrollView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Leaves Per Second: 0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zuy-sX-K8R">
-                                <rect key="frame" x="39" y="456" width="312" height="20.333333333333314"/>
-                                <color key="backgroundColor" systemColor="systemGreenColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemTealColor"/>
                         <constraints>
-                            <constraint firstItem="zuy-sX-K8R" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="39" id="AaL-TC-8Gl"/>
-                            <constraint firstItem="btH-m2-wNy" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="169" id="CTz-M1-o12"/>
-                            <constraint firstItem="zuy-sX-K8R" firstAttribute="top" secondItem="btH-m2-wNy" secondAttribute="bottom" constant="19" id="GwW-xn-vtC"/>
-                            <constraint firstItem="gxg-0g-xOj" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="1.77725" id="JA0-ZT-lq3"/>
-                            <constraint firstItem="fwq-37-I9R" firstAttribute="top" secondItem="zuy-sX-K8R" secondAttribute="bottom" constant="49.670000000000002" id="Jqv-Xy-34e"/>
-                            <constraint firstItem="zuy-sX-K8R" firstAttribute="top" secondItem="btH-m2-wNy" secondAttribute="bottom" constant="19" id="Oe1-Ic-p9b"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="818-dS-Y7J" secondAttribute="trailing" constant="37" id="Tbu-vm-2wk"/>
-                            <constraint firstItem="btH-m2-wNy" firstAttribute="top" secondItem="818-dS-Y7J" secondAttribute="bottom" constant="31" id="YaI-qB-Sx8"/>
-                            <constraint firstItem="fwq-37-I9R" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="YcX-RG-e1s"/>
-                            <constraint firstAttribute="bottom" secondItem="fwq-37-I9R" secondAttribute="bottom" id="Ykd-9k-lMq"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="zuy-sX-K8R" secondAttribute="trailing" constant="39" id="Z3X-DG-4A8"/>
-                            <constraint firstItem="818-dS-Y7J" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="291" id="ayA-rx-LTR"/>
-                            <constraint firstItem="gxg-0g-xOj" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="e4t-m6-fo6"/>
-                            <constraint firstItem="btH-m2-wNy" firstAttribute="top" secondItem="818-dS-Y7J" secondAttribute="bottom" constant="31" id="ihB-sx-y0U"/>
-                            <constraint firstItem="818-dS-Y7J" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="39" id="nRU-oU-bpb"/>
-                            <constraint firstItem="fwq-37-I9R" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="xuU-vs-yYe"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="btH-m2-wNy" secondAttribute="trailing" constant="169" id="xvO-cb-CdT"/>
+                            <constraint firstItem="CT7-7O-J3c" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="7cV-of-OWo"/>
+                            <constraint firstItem="CT7-7O-J3c" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="640" id="EgY-YK-ZPj"/>
+                            <constraint firstItem="Gr9-p0-TjM" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="1.77725" id="Fo0-ot-Wt9"/>
+                            <constraint firstItem="CT7-7O-J3c" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="OEu-7H-UqD"/>
+                            <constraint firstAttribute="bottom" secondItem="CT7-7O-J3c" secondAttribute="bottom" id="nx1-KS-NlX"/>
+                            <constraint firstItem="Gr9-p0-TjM" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="omn-TC-m4m"/>
                         </constraints>
                     </view>
                     <size key="freeformSize" width="390" height="844"/>
                     <connections>
-                        <outlet property="botanistAmount" destination="VUV-39-lya" id="20l-WC-hz5"/>
+                        <outlet property="BuySquirrelLabel" destination="Xvy-WC-RVw" id="ze4-hE-edH"/>
+                        <outlet property="botanistAmount" destination="766-es-XLd" id="fYi-kR-boJ"/>
                         <outlet property="buyBotanistLabel" destination="VUV-39-lya" id="oJG-Jd-hCF"/>
                         <outlet property="buyClickerButton" destination="hYJ-nD-yf9" id="ULb-g1-yiy"/>
                         <outlet property="buyClickerLabel" destination="0AY-r9-xcs" id="vU8-My-0Dg"/>
+                        <outlet property="buyClickerUpgradeLabel" destination="PWP-X2-xhV" id="7d2-Tl-LZv"/>
                         <outlet property="buyLumberjackLabel" destination="0pd-Dv-12l" id="9Xl-Q3-awZ"/>
                         <outlet property="clickButton" destination="btH-m2-wNy" id="6cc-Oa-Ut1"/>
+                        <outlet property="clickerUpgradeAmount" destination="6yd-XF-VtZ" id="WYM-8R-WKt"/>
                         <outlet property="clicksLabel" destination="818-dS-Y7J" id="j3n-8n-35f"/>
                         <outlet property="leavesPerSecond" destination="zuy-sX-K8R" id="DgZ-MQ-u81"/>
                         <outlet property="lumberjackAmount" destination="ZbI-Fy-KjD" id="2oh-s8-9kI"/>
+                        <outlet property="nutsLabel" destination="XMr-ZR-8Nd" id="N59-ir-hoG"/>
+                        <outlet property="squirrelAmount" destination="2G4-Ee-iKg" id="eZU-SK-SKf"/>
                         <outlet property="tapperAmount" destination="Gea-iC-jIU" id="G9g-vh-8RM"/>
                     </connections>
                 </viewController>
@@ -181,6 +255,11 @@
         </scene>
     </scenes>
     <resources>
+        <image name="botanist2" width="128" height="128"/>
+        <image name="cursor" width="128" height="128"/>
+        <image name="lumberjack" width="128" height="128"/>
+        <image name="squirrel" width="128" height="128"/>
+        <image name="tapper3" width="128" height="128"/>
         <systemColor name="systemGreenColor">
             <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

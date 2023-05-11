@@ -46,12 +46,14 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var buyClickerUpgradeLabel: UILabel!
     
+    @IBOutlet weak var buySaplingLabel: UILabel!
     @IBOutlet weak var clickerUpgradeAmount: UILabel!
     
     
     @IBOutlet weak var buyLogCabinLabel: UILabel!
     
     @IBOutlet weak var logCabinAmount: UILabel!
+    @IBOutlet weak var saplingAmount: UILabel!
     
     
     var lps = 0.0 {
@@ -111,6 +113,11 @@ class ViewController: UIViewController {
         }
     }
     
+    var sapAmount = 0 {
+        didSet {
+            saplingAmount.text = "\(sapAmount) Sapling(s)"
+        }
+    }
     
     var botanist = 100.0 {
         didSet {
@@ -139,6 +146,11 @@ class ViewController: UIViewController {
     var log = 20000.0 {
         didSet {
             buyLogCabinLabel.text = "Log Cabin: \(roundedLogCabin)"
+        }
+    }
+    var sapling = 100000.0 {
+        didSet {
+            buySaplingLabel.text = "Sapling: \(roundedValueSapling)"
         }
     }
     var valueClicks : Double {
@@ -222,7 +234,14 @@ class ViewController: UIViewController {
             round(valueLps * 100) / 100.0
         }
     }
-    
+    var valueSapling: Double {
+        get {
+            return sapling
+        }
+    }
+    var roundedValueSapling: Double {
+        round(valueSapling * 100) / 100.0
+    }
     var timer = Timer()
     
     
@@ -286,13 +305,13 @@ class ViewController: UIViewController {
         func updateCounting(){
             clicks = clicks + 1.1
             if clicker >= 100 {
-                clicks = clicks + 1.3
+                clicks = clicks + 3.3
             }
             if clicker >= 400 {
-                clicks = clicks + 2.3
+                clicks = clicks + 5.3
             }
             if clicker >= 3000 {
-                clicks = clicks + 6.4
+                clicks = clicks + 7.4
             }
         }
         
@@ -316,9 +335,9 @@ class ViewController: UIViewController {
                 updateCounting()
             })
             func updateCounting (){
-                clicks = clicks + 1.6
+                clicks = clicks + 5.7
                 if botanist >= 500 {
-                    clicks = clicks + 1.9
+                    clicks = clicks + 8.9
                 }
             }
         }
@@ -336,9 +355,9 @@ class ViewController: UIViewController {
                 updateCounting()
             })
             func updateCounting (){
-                clicks = clicks + 14.3
+                clicks = clicks + 24.3
                 if lumberjack >= 10000 {
-                    clicks = clicks + 15.6
+                    clicks = clicks + 45.6
                     
                 }
             }
@@ -376,21 +395,38 @@ class ViewController: UIViewController {
     }
     
     @IBAction func buyLogCabinButton(_ sender: Any) {
-    if clicks < log {
-        return
-    }
-    if clicks >= log {
-        clicks -= log
-        log = log * 1.3
-        logAmount += 1
-        self.timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true, block: {_ in
-            updateCounting()
-        })
-        func updateCounting (){
-            clicks = clicks + 80.3
+        if clicks < log {
+            return
         }
+        if clicks >= log {
+            clicks -= log
+            log = log * 1.3
+            logAmount += 1
+            self.timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true, block: {_ in
+                updateCounting()
+            })
+            func updateCounting (){
+                clicks = clicks + 100.3
+            }
+        }
+        
     }
     
+    
+    @IBAction func buySaplingButton(_ sender: Any) {
+        if clicks < sapling {
+            return
+        }
+        if clicks >= sapling {
+            clicks -= sapling
+            sapling = sapling * 1.2
+            sapAmount += 1
+            self.timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true, block: {_ in
+                updateCounting()
+            })
+            func updateCounting (){
+                clicks = clicks + 404.4
+            }
+        }
+    }
 }
-}
-
